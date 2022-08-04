@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <UserSecretsId>93c86ada-ecd4-4a81-b5c5-e14dc6bbd479</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Extensions.Hosting.AsyncInitialization" Version="1.0.0" />
+        <PackageReference Include="FastEndpoints" Version="4.3.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Dashome.Application\Dashome.Application.csproj" />
+      <ProjectReference Include="..\Dashome.Auth.Jwt\Dashome.Auth.Jwt.csproj" />
+      <ProjectReference Include="..\Dashome.Auth.Oidc\Dashome.Auth.Oidc.csproj" />
+      <ProjectReference Include="..\Dashome.Auth\Dashome.Auth.csproj" />
+      <ProjectReference Include="..\Dashome.Infrastructure\Dashome.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
